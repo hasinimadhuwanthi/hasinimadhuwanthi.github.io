@@ -1,12 +1,13 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
-  </div>
-
-</mat-drawer-container>
+<div class="h-screen w-full">
+  <mat-drawer-container class="grid grid-cols-12 h-full w-full">
+    <mat-drawer mode="side" class="col-span-3" opened>
+      <app-profile-view></app-profile-view>
+    </mat-drawer>
+    <mat-drawer-content class="bg-slate-400 col-span-9">
+      <div class="h-full grid grid-rows-12">
+        <app-objective-view class="row-span-2"></app-objective-view>
+        <app-content-tab-view class="row-span-10"></app-content-tab-view>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
