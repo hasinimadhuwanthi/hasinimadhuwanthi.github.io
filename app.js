@@ -1,4 +1,4 @@
-// Smooth scroll + close mobile menu
+// Mobile menu toggle
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 const links = document.querySelectorAll('a[href^="#"]');
@@ -13,6 +13,7 @@ navToggle.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
+// Smooth scroll + close menu
 links.forEach((a) => {
   a.addEventListener("click", (e) => {
     const id = a.getAttribute("href");
@@ -25,7 +26,7 @@ links.forEach((a) => {
   });
 });
 
-// Reveal sections on scroll
+// Reveal on scroll
 const reveals = document.querySelectorAll(".reveal");
 const io = new IntersectionObserver(
   (entries) => {
