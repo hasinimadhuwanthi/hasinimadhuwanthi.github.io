@@ -300,6 +300,18 @@ input:focus, textarea:focus{
   overflow:hidden;clip:rect(0,0,0,0); white-space:nowrap;border:0;
 }
 
+.copy-btn{
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+}
+.copy-btn:hover{ color: var(--text); border-color: rgba(255,255,255,.18); }
+
 /* Responsive */
 @media (max-width: 980px){
   .hero-wrap{ grid-template-columns: 1fr; }

@@ -38,3 +38,17 @@ const io = new IntersectionObserver(
 );
 
 reveals.forEach((el) => io.observe(el));
+
+document.querySelectorAll("[data-copy]").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const text = btn.getAttribute("data-copy");
+    try {
+      await navigator.clipboard.writeText(text);
+      const old = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = old), 1200);
+    } catch {
+      alert("Copy not supported in this browser.");
+    }
+  });
+});
