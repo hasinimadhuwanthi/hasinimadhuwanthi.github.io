@@ -1,64 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hasini Madhuwanthi | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <nav>
-      <h2 class="logo">YourName</h2>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <!-- Background glow -->
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-dot"></span>
+        <span>Hasini</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="sr-only">Toggle menu</span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-cta">
+          <a class="btn btn-small" href="#contact">Hire Me</a>
+        </li>
       </ul>
     </nav>
 
-    <div class="hero">
-      <h1>Hi, I'm <span>Your Name</span></h1>
-      <p>Frontend Developer | UI Designer | Creative Thinker</p>
-      <a href="#projects" class="btn">View My Work</a>
+    <div id="top" class="hero container">
+      <p class="kicker">Developer • Creative UI • Web Apps</p>
+      <h1 class="headline">
+        Hi, I’m <span class="accent">Hasini Madhuwanthi</span><br />
+        I build modern, beautiful web experiences.
+      </h1>
+      <p class="subhead">
+        Welcome to my professional portfolio. I’m a passionate developer who enjoys crafting fast,
+        accessible, and mobile-first interfaces.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+      </div>
+
+      <div class="hero-badges">
+        <span class="badge">Mobile-first</span>
+        <span class="badge">Dark UI</span>
+        <span class="badge">Clean Code</span>
+      </div>
     </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I build clean, responsive websites and web apps using modern technologies.
-      Passionate about creating beautiful user experiences.
-    </p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>Short project description goes here.</p>
+  <main>
+    <section id="about" class="section container reveal">
+      <div class="section-head">
+        <h2>About Me</h2>
+        <p>Short, clear, and human — what you do and what you love building.</p>
       </div>
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>Short project description goes here.</p>
-      </div>
-      <div class="card">
-        <h3>Project Three</h3>
-        <p>Short project description goes here.</p>
-      </div>
-    </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>LinkedIn | GitHub | Twitter</p>
-  </section>
+      <div class="grid two">
+        <div class="panel">
+          <h3>What I do</h3>
+          <p>
+            I design and develop responsive websites and web apps with a focus on performance,
+            accessibility, and delightful user experience.
+          </p>
+          <ul class="list">
+            <li>UI/UX-minded frontend development</li>
+            <li>Reusable components and clean architecture</li>
+            <li>API integrations and modern tooling</li>
+          </ul>
+        </div>
 
-  <footer>
-    <p>© 2026 Your Name. All rights reserved.</p>
+        <div class="panel panel-highlight">
+          <h3>Quick profile</h3>
+          <div class="facts">
+            <div class="fact"><span class="label">Role</span><span class="value">Web Developer</span></div>
+            <div class="fact"><span class="label">Focus</span><span class="value">Frontend + UI</span></div>
+            <div class="fact"><span class="label">Location</span><span class="value">Sri Lanka</span></div>
+          </div>
+          <p class="note">
+            Tip: Add a link to your CV or GitHub below.
+          </p>
+          <div class="mini-actions">
+            <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn btn-small" href="#" target="_blank" rel="noreferrer">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container reveal">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Show 3–6 projects. Add links + short impact statements.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <h3>Portfolio Website</h3>
+            <span class="tag">HTML • CSS • JS</span>
+          </div>
+          <p>Personal portfolio with smooth navigation and responsive layout.</p>
+          <div class="card-actions">
+            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>E-commerce Site</h3>
+            <span class="tag">React • API</span>
+          </div>
+          <p>Product listing, cart flow, and clean UI with reusable components.</p>
+          <div class="card-actions">
+            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Blogging Platform</h3>
+            <span class="tag">Node • CRUD</span>
+          </div>
+          <p>Simple blog with authentication-ready structure and CRUD posts.</p>
+          <div class="card-actions">
+            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section container reveal">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Your strongest tools first — keep it scannable.</p>
+      </div>
+
+      <div class="skill-chips">
+        <span class="chip">JavaScript</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Git</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">Responsive Design</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section container reveal">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Make it easy for people to reach you.</p>
+      </div>
+
+      <div class="grid two">
+        <div class="panel">
+          <h3>Contact Me</h3>
+          <p class="contact-line"><span>📧</span> your-email@example.com</p>
+          <p class="contact-line"><span>🌐</span> Add your LinkedIn / GitHub</p>
+          <p class="tiny">
+            Replace the email and links with your real ones.
+          </p>
+        </div>
+
+        <form class="panel form" onsubmit="return false;">
+          <h3>Quick Message</h3>
+          <label>
+            <span>Name</span>
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="you@email.com" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea rows="4" placeholder="Say hello..."></textarea>
+          </label>
+          <button class="btn" type="submit">Send (demo)</button>
+          <p class="tiny">This is a demo form (no backend). I can add EmailJS or a server if you want.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© 2026 Hasini Madhuwanthi. All rights reserved.</p>
   </footer>
 
   <script src="app.js"></script>
